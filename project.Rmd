@@ -37,6 +37,7 @@ library(purrr)
 library(broom)
 library(stringr)
 library(ggplot2)
+library(ggrepel)
 ```
 
 We will scrape a dataset containing information about the Big Mac index from the URL: "http://bigmacindex.org"
@@ -63,9 +64,10 @@ wage_data <- url_wage %>%
   read_html() %>%
   html_node("#tabsort") %>%
   html_table()
-  
-wage_data
 
+wage_data$Monthly = substr(wage_data$Monthly,1,nchar(wage_data$Monthly)-1)
+wage_data$Monthly <- as.numeric(gsub(",","",wage_data$Monthly))
+wage_data
 ```
 
 
@@ -103,13 +105,35 @@ Big Macs per month: Given the local price and the local average/minimum salarie,
 
 Hours per Big Mac: Given the local price and the local average/minimum salarie, how many hours does someone have to work to afford one Big Mac.
 
+For this we will need to use data from different tables so we will do a join operation!
+The problem is that in some tables countries are listed according to their abbreviations and not their full names. So we searched online and found a dataset that maps countries to their abbreviation and it is what we'll use to make our join possible
+
 ```{r}
 
+country_abbreviation <- read_csv("/Users/benjamimo1/Google Drive/2019-1/Intro to Data Science/project_final/country_codes.csv")
+country_abbreviation <- country_abbreviation %>%
+  select(FIFA, `UNTERM English Short`) %>% 
+  arrange(desc(desc(FIFA)))
+country_abbreviation
 ```
 
 ```{r}
+#mac_data <- mac_data %>%
+#  inner_join(country_abbreviation, by = c( Country = "UNTERM English Short"))
+
+#wage_data %>%
+#  inner_join(country_abbreviation, by = c( Country = "UNTERM English Short"))
+
+macXwage <- mac_data %>% inner_join(wage_data, "Country")
+macXwage <- macXwage %>%
+  mutate(monthly_macs = as.double(Monthly) / `Dollar Price`) 
+
+macXwage %>%
+  ggplot(aes(x=c(0), y=monthly_macs, label = Country)) + geom_label_repel(size = 3.5)
 
 ```
+
+From the graph above we can see how Hong Kong and Singapore are on the top of our metric. This means that relative to food (in this case Big Macs), people from Hong Kong have on average the highest purchasing power in the world.
 
 ```{r}
 
