@@ -85,6 +85,13 @@ minimum_wage_data <- minimum_wage_data %>%
   select(COUNTRY,Time,Value,`Pay period`,SERIES)
 minimum_wage_data
 ```
+```{r }
+
+minimum_wage_data %>% 
+  ggplot(aes(x=factor(COUNTRY), y=Value, color=COUNTRY)) + geom_point() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+From the graph above we can see how minimum wage has increased over time in all countries.
 
 Now that we have all the data that we need, let's tidy it up. First, we will remove some rows from minimum_wage_data, so we are only working with the latest information. For instance, we can see that we have several data entries for IRL (representing Ireland), but we know we only need one: The latest
 
@@ -138,6 +145,8 @@ macXwage %>%
 From the graph above we can see how Hong Kong and Singapore are on the top of our metric. This means that relative to food (in this case Big Macs), people from Hong Kong have on average the highest purchasing power in the world.
 
 Now that we have seen this result for the average citizen, what about does who are not in the middle but rather at the bottom?
+
+Because of inconsistencies between our datasets we will do multiple joins to be able to join between countries' full names and their abbreviation.
 
 ```{r}
 
