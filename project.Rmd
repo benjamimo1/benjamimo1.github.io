@@ -1,9 +1,12 @@
 ---
 title: "Final Project"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
+
+####PS: the URL in line 64  can have issues when receiving several request. My IP was blocked during the development of this project. HTTP error 429. Please re run the knit for the best result
 
 Hello! My name is Benjamin and I'm an exchange student from Chile. I spent this spring semester being an exchange student in the Computer Science department. I recently graduated so I have started searching and applying for job positions. Although the common thing would be to apply to local jobs (job positions in Chile) I'm very open to the idea of moving abroad in order to get a better quality of life. Because of this, I was curious about what country, on average, has the best purchasing power in the world. This meaning what country has the best access to services and good, and hence, has a better quality of life.
 
@@ -118,8 +121,7 @@ country_abbreviation
 ```
 
 ```{r}
-#mac_data <- mac_data %>%
-#  inner_join(country_abbreviation, by = c( Country = "UNTERM English Short"))
+
 
 #wage_data %>%
 #  inner_join(country_abbreviation, by = c( Country = "UNTERM English Short"))
@@ -135,24 +137,25 @@ macXwage %>%
 
 From the graph above we can see how Hong Kong and Singapore are on the top of our metric. This means that relative to food (in this case Big Macs), people from Hong Kong have on average the highest purchasing power in the world.
 
-```{r}
-
-```
-
-
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Now that we have seen this result for the average citizen, what about does who are not in the middle but rather at the bottom?
 
 ```{r}
 
+latest_minimum_wage_data <- latest_minimum_wage_data %>%
+  inner_join(country_abbreviation, c("COUNTRY"="FIFA"))
+
+minMac <- latest_minimum_wage_data %>%
+  inner_join(mac_data, c("UNTERM English Short"="Country"))
+  
+minMac <- minMac %>%
+  mutate(yearly_macs = Value / `Dollar Price`) 
+
+minMac %>%
+  ggplot(aes(x=c(0), y=yearly_macs, label = COUNTRY)) + geom_label_repel(size = 3.5)
+
 ```
 
+We plotted the same idea, but yearly. How many Big Macs can a minimum wage worker buy a year per country.
 ##Bibliography
 
 [1]  "Big MacCurrencies". The Economist. 9 April 1998.
