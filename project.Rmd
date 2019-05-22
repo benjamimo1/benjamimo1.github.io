@@ -164,6 +164,9 @@ minMac %>%
 
 ```
 
+Here we can see how Australia is now on top, followed by Ireland.
+It is important to mention that for this part of the project the total number of considered countries was reduced after the inner join. This ocurred because there was not a exact match between the two different ways to refer a country. E.i = United States and United States of America.
+
 We plotted the same idea, but yearly. How many Big Macs can a minimum wage worker buy a year per country.
 ##Bibliography
 
