@@ -1,9 +1,9 @@
 ---
 title: "Final Project"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ####PS: the URL in line 64  can have issues when receiving several request. My IP was blocked during the development of this project. HTTP error 429. Please re run the knit for the best result
