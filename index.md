@@ -1,3 +1,31 @@
+# Nociones generales de los sistemas recomendadores
+
+Los sistemas recomendadores o de ranking pueden ser clasificados considerando:
+
+El tipo de dato usado:
+Metodo basado en reglas
+Metodo basado en contenido (aquello que el usuario consumio)
+Filtrado colaborativo: Mutuo basado en usuarios
+
+El tipo de modelo usado:
+Basado en memoria: KNN (KNN se considera un metodo basado en memoria pues compara con la base de datos actuales)
+Basado en modelo: latentes
+
+
+Modelos disponibles y de facil implementacion:
+Modelo Slope One
+Modelos Bayesianos
+Funk SVD
+
+Metricas relevantes:
+AUC : area under the curve
+Calidad = precision, minimiza error
+Recall = % descubrimiento, volumen
+RMSE: Root Mean Square Error
+DCG y nDCG: permite comparar listas de recomendacion de tamaño distinto
+Nociones de item coverage y User coverage
+
+
 # Sistemas Recomendadores Texto
 
 ## Terminos clave: 
