@@ -65,3 +65,18 @@ Por cuanto los sistemas recomendadores pueden tener gran impacto social es desea
 
 A medida que RecSys se vuelve mas complejo, es mas dificil de explicar. Pero por suerte a surgido una nueva ola de sistemas auto explicables, donde la  explicacion es parte del output del modelo. Un apronte de solucion en particular es el usar explicacion por similaridad en casos de factorizacion matricial, es relativamente sencilla de implementar por lo que puede considerarse o usarse como baseline en sistemas recomendadores que diseñemos.
 
+# Deep Learning en sistemas de recomendaciones visual
+
+Recomendacion basada en contenido. Recomendacion de imagenes similares.
+Ejemplo de usuario que consume documentos: TD - IDF. Representacion vectorial de documentos en funcion de las palabras que lo constituyen. Uso de herramientas como VisRank + Pytorch (Factorizacion matricial es similar en estructura a esto, pues se usan embeddings). 
+
+Modelos relevantes:
+
+- NCF: Neural Collaborative Filtering
+- Recomendacion basada en autoencoders
+- MultVAE: variation auto encoder
+- VisRec, CuratorNet
+- Difussion visual BPR (bayesian personalized ranking)
+
+
+Dato clave: No siempre una DL es mejor que una factorizacion matricial si no usamos CONTENIDO.
