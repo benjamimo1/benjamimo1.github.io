@@ -80,3 +80,31 @@ Modelos relevantes:
 
 
 Dato clave: No siempre una DL es mejor que una factorizacion matricial si no usamos CONTENIDO.
+
+# Sistemas Recomendadores basados en aprendizaje reforzado 
+
+Buscamos optimizar una función de recompensa a lo largo del tiempo a traves de la interaccion con el usuario. 
+Exploracion vs Explotacion: Navego nuevas opciones o juego a la segura. Largo vs Corto plazo.
+
+Problematicas asociadas: 
+- Cold start
+- Cambios en preferencias de usuarios
+- Cambios en el catalogo de productos
+- Cambios en el contexto de uso de la aplicacion (plataforma)
+
+Riesgo de exploracion: mala recomendacion
+Riesgo de explotacion: perder una alta recompensa al no recomendar algo nuevo
+
+**Multi Armed Bandits**: cada bandit posee una distribucion de rewards que desconozco
+Mision: estimar la esperanza de reward con el minimo de juegos posibles
+ 
+Estrategia: explorar y luego explotar
+Qt(a) = sum(rewards) / N pasos exploración 
+
+Navegacion aleatoria o una por opcion en exploracion, luego uso de algoritmo greedy en la explotacion
+
+Un parametro epsilon determina el grado de exploracion
+Otra estrategia: epsilon decreciente
+
+
+### Thompson Sampling
