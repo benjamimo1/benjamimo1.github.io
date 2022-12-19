@@ -175,3 +175,27 @@ Knowledge o grafo de conocimiento
 <15:30>
 
 Herramientas: CMU, Deep Pavlov. Hoy se venden frameworks completos
+
+
+# Resumen Final, GNN
+
+
+Filtrado colaborativo en funcion de usuarios similares. Sufre de cold start y new item.
+Ante esto surge el filtrado basado en contenido (itemes similares).
+Formalizacion del problema a traves de la matriz de rating y metricas como RMSE
+Modelos latentes y representacion vectorial de los itemes, usuarios (profiling). Aumenta las operaciones matematicas disponibles. 
+Luego conocimos metodos basados en Deep Learning, por ejemplo el que usa Youtube. Candidatos + Ranking.
+Reinforcement Learning como alternativa a deep Learning.
+
+## 10 Problemas abiertos:
+
+1. Filtros burbujas y su efecto en la polarizacion. Esto afecta a las personas pues somos propensos a sesgo de confirmacion.
+2. Inteligencia artificial no inteligente: maximización vacia de una función objetivo. Las metricas son distintas a los objetivos.
+3. Falta de control y transparencia para el usuario (explicabilidad y propiedad del perfil). Entregar capacidad de fine tune y simular escenarios
+4. Recomendaciones justas (fair): Fairness, accountability and transparency.
+5. Metricas: RMSE, MAE, Top N / CTR, Conversion Rate, Engagement / diversidad, novedad
+6. Interactividad y multiples fuentes de datos
+7. Reproducibilidad de los resultados de una investigacion. A veces algoritmos viejos son mejores
+8. Conductismo e impacto en la vida cotidiana.
+9. RecSys para audiencias no tradicionales
+10. Privacidad: mas data mejora performance pero a costa de privacidad
