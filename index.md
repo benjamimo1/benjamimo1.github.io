@@ -108,3 +108,6 @@ Otra estrategia: epsilon decreciente
 
 
 ### Thompson Sampling
+
+En vez de asumir una distribucion subyacente desconocida, intentaremos estimar los parametros de dicha distribucion usando sample. Estimacion a traves de una bernoulli/binomial y una beta. Se introduce la nocion de Intervalos de confianza (UCB).
+Una extension de lo visto anteriormente con los multi armed bandits son los Contextual Bandits y el uso de Linear UCB. Para el caso de Contextual Bandits se hace uso de contextos globales mas amplios y para el caso de linear UCB se hace uso de segmentación parametrica lineal
