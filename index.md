@@ -108,6 +108,8 @@ Navegacion aleatoria o una por opcion en exploracion, luego uso de algoritmo gre
 Un parametro epsilon determina el grado de exploracion
 Otra estrategia: epsilon decreciente
 
+En mi experiencia laboral trabajando con sistemas de AI, gran parte de los modelos de ranking/recomendacion hacen uso de heuristicas o decision trees mas simples para asegurar explainability. Ahora bien, es de suponer, que modelos basados en reinforcement learning tengan una mejor performance por cuanto buscan optimizar una funcion objetivo a traves de la adopcion de una politica de comportamiento exitosa, aun cuando esto sea a costa de explainability.
+
 
 ### Thompson Sampling
 
@@ -148,12 +150,9 @@ Uso de knowledge graphs en la inteligencia subyacente
 Decision: respondo, pregunto o recomiendo
 
 
-
 Datasets Utilizados se dividen segun su tipo de dialogo: Rec, ChitChat, Q&A
 Ejemplo: dataset construido sobre los reviews de amazon, reviews en Yelp. La practica usual es transformar reviews en conversaciones.
 ReDail dataset si contiene conversaciones
-
-
 
 Academia:
 Mejorar el estado del arte, nuevas formas de resolver el problema, proponer nuevas arquitecturas
@@ -174,9 +173,10 @@ Dialogue state management: hablo, pregunto o recomiendo. Acotar hasta recomendar
 Sistema recomendador propiamente tal
 Generador de explicaciones
 Knowledge o grafo de conocimiento
-<15:30>
 
 Herramientas: CMU, Deep Pavlov. Hoy se venden frameworks completos
+
+Si bien no tengo experiencia laboral con este tema, me parece altamente relevante en el contexto actual en el que tecnologias como chat GTP han logrado tanto alcance e impacto en tan poco tiempo.
 
 
 # Resumen Final, GNN
@@ -238,3 +238,7 @@ A evaluar:
 - User centric y FAccT
 - Conversational Recommender Systems
 - GNN
+
+La representacion vectorial a traves de embeddings de elementos y usuarios es algo en lo que actualmente mi equipo esta trabajando! Es un espacio de investigacion muy interesante y de alto costo computacional (como bien se menciono en clases). Bajo la logica de que elementos similares se encuentran cerca al ser traslados a un nuevo espacio vectorial, en mi trabajo aprendi sobre el algoritmo Approximate k-NN Search que busca reducir los costos de computo para la busqueda de vecindarios sobre la data ya vectorizada. Muy util particularmente en sistemas de recomendacion bajo modelos de filtrado colaborativo.
+
+
