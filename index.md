@@ -234,11 +234,15 @@ Cada capa se comporta bajo la estructura Update, Aggregate, Message
 NGCF elimina varios parametros de una red tradicional al asumir atributos lo suficientemente expresivos.
 NGCF tiene mayor varianza que LightGCN en sus metricas de performance
 
+
+La representacion vectorial a traves de embeddings de elementos y usuarios es algo en lo que actualmente mi equipo esta trabajando! Es un espacio de investigacion muy interesante y de alto costo computacional (como bien se menciono en clases). Bajo la logica de que elementos similares se encuentran cerca al ser traslados a un nuevo espacio vectorial, en mi trabajo aprendi sobre el algoritmo Approximate k-NN Search que busca reducir los costos de computo para la busqueda de vecindarios sobre la data ya vectorizada. Muy util particularmente en sistemas de recomendacion bajo modelos de filtrado colaborativo.
+
+
+Note to self:
+
 A evaluar: 
 - User centric y FAccT
 - Conversational Recommender Systems
 - GNN
-
-La representacion vectorial a traves de embeddings de elementos y usuarios es algo en lo que actualmente mi equipo esta trabajando! Es un espacio de investigacion muy interesante y de alto costo computacional (como bien se menciono en clases). Bajo la logica de que elementos similares se encuentran cerca al ser traslados a un nuevo espacio vectorial, en mi trabajo aprendi sobre el algoritmo Approximate k-NN Search que busca reducir los costos de computo para la busqueda de vecindarios sobre la data ya vectorizada. Muy util particularmente en sistemas de recomendacion bajo modelos de filtrado colaborativo.
 
 
