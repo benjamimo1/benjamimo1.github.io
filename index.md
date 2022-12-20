@@ -202,6 +202,8 @@ Reinforcement Learning como alternativa a deep Learning.
 9. RecSys para audiencias no tradicionales
 10. Privacidad: mas data mejora performance pero a costa de privacidad
 
+Todos estos problemas abiertos son relevantes en tanto la academia como en la industria. Esto por cuanto de forma creciente la poblacion esta consciente sobre el uso de sus datos y su privacidad. La sociedad ha ido aumentando sus niveles de escrutinio y exigencia de garantias respecto a sus derechos digitales. Esto es relevante para la industria pues debe ser capaz de ofrecer servicios y tecnologias que dentro de su propuesta de valor, consideren temas como la explicabilidad, transparencia y amplios espectros de audiencia. Esta ultima en particular es algo que discutimos a diario en lo laboral; por cuanto nuestra base de usuarios estan en los millones, debemos ser capaces de programar para todos, es decir, teniendo siempre en consideracion un usuario diverso y de backgrounds que se extienden mas alla de lo que conocemos en nuestra vida personal.
+
 
 # Graph Neural Networks
 
