@@ -65,6 +65,8 @@ Por cuanto los sistemas recomendadores pueden tener gran impacto social es desea
 
 A medida que RecSys se vuelve mas complejo, es mas dificil de explicar. Pero por suerte a surgido una nueva ola de sistemas auto explicables, donde la  explicacion es parte del output del modelo. Un apronte de solucion en particular es el usar explicacion por similaridad en casos de factorizacion matricial, es relativamente sencilla de implementar por lo que puede considerarse o usarse como baseline en sistemas recomendadores que diseñemos.
 
+Todos los temas discutidos en clases son efectivamente relevantes en la academia como en la industria. En mi experiencia laboral, en cada equipo de Applied Scientists (personas encargadas de diseñar sistemas de clasificacion o recomendacion usando AI) existe un encargado de etica. Dicho encargado cumple con la funcion de hacer charlas sobre el tema, revisar los modelos existentes y asegurarse que estos cumplan con estandares eticos altos.
+
 # Deep Learning en sistemas de recomendaciones visual
 
 Recomendacion basada en contenido. Recomendacion de imagenes similares.
@@ -224,4 +226,15 @@ GraphSage (inductivo):
 2. Agregar informacion de subvecinos
 3. Predecir contexto de grafos en funcion del contexto
 
-Se enfrenta a crecimiento exponencial de las operaciones a medida que N crece. Padece de la maldicion de nodos celebridades (nodos con muchas aristas). Solucion a esto es realizar sampleo de vecinos en las funciones de agregacion. Uso de operaciones init y concat para popular el grafo.
+Se enfrenta a crecimiento exponencial de las operaciones a medida que N crece. Padece de la maldicion de nodos celebridades (nodos con muchas aristas). Solucion a esto es realizar sampleo de vecinos en las funciones de agregacion. Uso de operaciones init y concat para popular el grafo. \
+Entrenamiento bajo perdida supervisada o no supervisada
+
+NGFC y LightGCN, representacion vectorial de nodos.
+Cada capa se comporta bajo la estructura Update, Aggregate, Message
+NGCF elimina varios parametros de una red tradicional al asumir atributos lo suficientemente expresivos.
+NGCF tiene mayor varianza que LightGCN en sus metricas de performance
+
+A evaluar: 
+- User centric y FAccT
+- Conversational Recommender Systems
+- GNN
