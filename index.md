@@ -199,3 +199,29 @@ Reinforcement Learning como alternativa a deep Learning.
 8. Conductismo e impacto en la vida cotidiana.
 9. RecSys para audiencias no tradicionales
 10. Privacidad: mas data mejora performance pero a costa de privacidad
+
+
+# Graph Neural Networks
+
+
+Grafos compuestos por nodos y vertices (direccionados o no)
+Caso de uso: recomendar enlaces en un grafo bipartito (lectores a libros por leer)
+Literatura: Simrank, Link prediction in social networks.
+Uso de grafos para mejorar explicabilidad. Scarselli y la nocion de GNN. El mayor poder de las GNN es representar a sus elementos a traves de embeddings.
+
+Filtros (modifica atributos) en base a operaciones de vecinos
+Seleccion (cambio en los atributos) en base a operaciones externas
+Nocion de convolucion en un grafo como operacion de un nodo en base a sus vecinos
+
+
+Capacidad de aprender relaciones complejas. Existen diferentes versiones de GNN:
+- Convolutional
+- Gated
+- Attention
+
+GraphSage (inductivo): 
+1. Muestrear vecindario
+2. Agregar informacion de subvecinos
+3. Predecir contexto de grafos en funcion del contexto
+
+Se enfrenta a crecimiento exponencial de las operaciones a medida que N crece. Padece de la maldicion de nodos celebridades (nodos con muchas aristas). Solucion a esto es realizar sampleo de vecinos en las funciones de agregacion. Uso de operaciones init y concat para popular el grafo.
